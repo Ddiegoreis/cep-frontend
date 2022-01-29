@@ -1,26 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Header from './components/Header'
+import { useState } from 'react'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import GlobalStyle from './styles/global'
+
+interface IDataAddress {
+	status: number
+	ok: boolean
+	code: string
+	state: string
+	city: string
+	district: string
+	address: string
+	statusText: string
 }
 
-export default App;
+function App() {
+	const [address, setAddress] = useState({} as IDataAddress)
+
+	return (
+		<>
+			<GlobalStyle />
+
+			<>
+				<Header address={address} setAddress={setAddress} />
+
+				<h1>{address.code}</h1>
+			</>
+		</>
+	)
+}
+
+export default App
