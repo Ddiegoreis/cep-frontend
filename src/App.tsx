@@ -2,6 +2,9 @@ import Header from './components/Header'
 import { useState } from 'react'
 
 import GlobalStyle from './styles/global'
+import { CardContainer } from './styles/Main'
+
+import CardAddress from './components/CardAddress'
 import { IDataAddress } from './interfaces/IDataAddress'
 
 function App() {
@@ -14,7 +17,11 @@ function App() {
 			<>
 				<Header address={address} setAddress={setAddress} />
 
-				<h1>{address.code}</h1>
+				{address.ok && (
+					<CardContainer>
+						<CardAddress data={address} />
+					</CardContainer>
+				)}
 			</>
 		</>
 	)
