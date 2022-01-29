@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export const StyledInputCep = styled(InputMask)`
   border: none;
-  height: 2.4em;
+  height: 52px;
   width: 100%;
 
   padding: 0 2%;
@@ -16,5 +16,5 @@ export const StyledInputCep = styled(InputMask)`
 
   color: #f9f9f9;
   font-weight: 400;
-  font-size: 1.4rem;
+  font-size: 1em;
 `

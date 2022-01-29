@@ -1,11 +1,10 @@
 import { StyledInputCep } from './styles'
 
 interface IPropsInputCep {
-	cep: string
 	setCep: (setCeo: string) => void
 }
 
-function InputCep({ cep, setCep }: IPropsInputCep) {
+function InputCep({ setCep }: IPropsInputCep) {
 	function onCepChange(e: React.ChangeEvent<HTMLInputElement>) {
 		setCep(e.target.value)
 	}

@@ -2,17 +2,7 @@ import Header from './components/Header'
 import { useState } from 'react'
 
 import GlobalStyle from './styles/global'
-
-interface IDataAddress {
-	status: number
-	ok: boolean
-	code: string
-	state: string
-	city: string
-	district: string
-	address: string
-	statusText: string
-}
+import { IDataAddress } from './interfaces/IDataAddress'
 
 function App() {
 	const [address, setAddress] = useState({} as IDataAddress)

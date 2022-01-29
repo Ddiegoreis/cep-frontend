@@ -2,8 +2,8 @@ import styled from "styled-components"
 
 export const StyledInputSubmit = styled.button`
   border: none;
-  height: 2.4em;
-  width: 2.4em;
+  height: 52px;
+  width: 52px;
 
   margin-left: 6px;
 

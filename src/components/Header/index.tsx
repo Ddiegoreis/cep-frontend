@@ -19,7 +19,7 @@ function Header({ address, setAddress }: IHeaderProps) {
 			<Title>Cep Explorer</Title>
 
 			<InputsContainer>
-				<InputCep cep={cep} setCep={setCep} />
+				<InputCep setCep={setCep} />
 
 				<SubmitButton cep={cep} setAddress={setAddress} />
 			</InputsContainer>
